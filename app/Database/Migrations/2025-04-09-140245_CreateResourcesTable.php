@@ -15,7 +15,7 @@ class CreateResourcesTable extends Migration
             'file_path'    => ['type' => 'VARCHAR', 'constraint' => 512, 'null' => true],
             'url'          => ['type' => 'VARCHAR', 'constraint' => 512, 'null' => true],
             'description'  => ['type' => 'TEXT', 'null' => true],
-            'uploaded_by'  => ['type' => 'INT', 'unsigned' => true],
+            'uploaded_by'  => ['type' => 'INT', 'unsigned' => true, 'null' => true],
             'created_at'   => ['type' => 'DATETIME', 'null' => true],
             'updated_at'   => ['type' => 'DATETIME', 'null' => true],
         ]);
@@ -29,6 +29,5 @@ class CreateResourcesTable extends Migration
     public function down()
     {
         $this->forge->dropTable('resources');
-
     }
 }

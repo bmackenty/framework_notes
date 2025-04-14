@@ -16,7 +16,7 @@ class CreateSyllabiTable extends Migration
             'title'            => ['type' => 'VARCHAR', 'constraint' => 255, 'null' => true],
             'content'          => ['type' => 'MEDIUMTEXT'],
             'is_active'        => ['type' => 'BOOLEAN', 'default' => true],
-            'created_by'       => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
+            'created_by'       => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'null' => true],
             'created_at'       => ['type' => 'DATETIME', 'null' => true],
             'updated_at'       => ['type' => 'DATETIME', 'null' => true],
         ]);

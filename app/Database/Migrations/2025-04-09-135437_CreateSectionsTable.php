@@ -12,7 +12,7 @@ class CreateSectionsTable extends Migration
             'id'            => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
             'course_id'     => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
             'name'          => ['type' => 'VARCHAR', 'constraint' => 100], // e.g., "Period 1", "Block A"
-            'teacher_id'    => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
+            'teacher_id'    => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'null' => true],
             'room'          => ['type' => 'VARCHAR', 'constraint' => 50, 'null' => true],
             'block'         => ['type' => 'VARCHAR', 'constraint' => 50, 'null' => true],
             'start_time'    => ['type' => 'TIME', 'null' => true],

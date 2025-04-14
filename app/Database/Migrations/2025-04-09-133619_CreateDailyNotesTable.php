@@ -15,7 +15,7 @@ class CreateDailyNotesTable extends Migration
             'note_date'          => ['type' => 'DATE'],
             'lesson_objectives'  => ['type' => 'TEXT', 'null' => true],
             'content'            => ['type' => 'MEDIUMTEXT'],
-            'created_by'         => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true],
+            'created_by'         => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'null' => true],
             'created_at'         => ['type' => 'DATETIME', 'null' => true],
             'updated_at'         => ['type' => 'DATETIME', 'null' => true],
         ]);
@@ -31,6 +31,5 @@ class CreateDailyNotesTable extends Migration
     public function down()
     {
         $this->forge->dropTable('daily_notes');
-
     }
 }
